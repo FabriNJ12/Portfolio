@@ -10,9 +10,6 @@ gsap.registerPlugin(ScrollToPlugin);
 ---
 
 <body class="body h-full bg-[#030014] relative flex items-center justify-start flex-col cursor-default gap-60">
-  <!-- Estrellas  -->
-  <script type="module" src="/scripts/stars.js"></script>
-
   <!-- Black Hole Background with Video -->
   <div class="blackHole fixed top-0 left-0 w-dvw h-[520px] lg:h-[620px] xl:h-[720px] z-[-1] overflow-hidden pointer-events-none flex justify-center items-start opacity-0">
     <video
@@ -23,7 +20,7 @@ gsap.registerPlugin(ScrollToPlugin);
       muted
       aria-hidden="true"
       role="presentation"
-      class="w-full h-full max-w-[1024px] object-cover transform scale-130 translate-y-[-50%] rotate-180 transition-all duration-[4000ms] ease-in-out"
+      class="w-full h-full max-w-[1024px] object-cover transform scale-130 translate-y-[-50%] rotate-180 transition-all ease-in-out"
     >
     </video>
   </div>
@@ -191,7 +188,7 @@ gsap.registerPlugin(ScrollToPlugin);
   </main>
 
   <!-- sideBar menu -->
-  <section class="bg opacity-0 pointer-events-none w-full h-full fixed z-50 flex md:hidden justify-end items-end bg-black/50">
+  <section class="bg opacity-0 pointer-events-none w-full h-full fixed z-500 flex md:hidden justify-end items-end bg-black/50">
     <div
       class="sideBar bg-[#020618] w-[65%] sm:w-[50%] md:w-[40%] h-full left-1/2 flex flex-col pt-[35px] px-6 rounded-tl-xl rounded-bl-xl border-y-[1px] border-l-[1px] border-SecundaryTextColor/30 gap-5 translate-x-[100%]"
     >
@@ -463,3 +460,6 @@ gsap.registerPlugin(ScrollToPlugin);
 <script is:inline src="/scripts/sideBar.js"></script>
 
 <script is:inline src="/scripts/windowLoad.js"></script>
+
+<!-- Estrellas  -->
+<script type="module" src="/scripts/stars.js"></script>

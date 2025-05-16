@@ -17,7 +17,6 @@ camera.position.z = 1;
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setPixelRatio(window.devicePixelRatio); // mejor calidad retina
 
-// 2. Crear un div contenedor con clases/estilos
 const container = document.createElement("div");
 container.className = "stars";
 container.style.position = "fixed";
@@ -28,6 +27,7 @@ container.style.height = "100%";
 container.style.zIndex = "-1"
 container.style.pointerEvents= 'none';
 container.style.opacity= '1';
+
 
 
 

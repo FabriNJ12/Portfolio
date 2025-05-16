@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       BlackHole.style.transition = "2000ms";
       BlackHole.style.opacity = "1";
-      stars.style.transition = "600ms";
+      stars.style.transition = "opacity 600ms transform 0s";
       stars.style.opacity = "1";
 
       setTimeout(() => {
