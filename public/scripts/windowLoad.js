@@ -1,10 +1,15 @@
-const content = document.querySelector(".content") 
-  const content2 = document.querySelector(".content2") 
-  const navBar = document.querySelector(".objet") 
-  const stars = document.querySelector(".stars") 
-  const BlackHole = document.querySelector(".blackHole")
+function waitForElements(selectors, callback) {
+  const interval = setInterval(() => {
+    const elements = selectors.map((sel) => document.querySelector(sel));
+    if (elements.every((el) => el)) {
+      clearInterval(interval);
+      callback(...elements);
+    }
+  }, 100);
+}
 
-  window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
+  waitForElements([".content", ".content2", ".objet", ".stars", ".blackHole"], (content, content2, navBar, stars, BlackHole) => {
     setTimeout(() => {
       BlackHole.style.transition = "2000ms";
       BlackHole.style.opacity = "1";
@@ -31,3 +36,4 @@ const content = document.querySelector(".content")
       }, 600);
     }, 600);
   });
+});

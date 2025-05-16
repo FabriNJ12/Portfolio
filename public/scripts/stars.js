@@ -1,4 +1,7 @@
+
+
 import * as THREE from "three";
+
 
 // 1. Crear escena, cámara y renderer
 const scene = new THREE.Scene();
@@ -24,7 +27,7 @@ container.style.width = "100dvw";
 container.style.height = "100%";
 container.style.zIndex = "-1"
 container.style.pointerEvents= 'none';
-container.style.opacity= '0';
+container.style.opacity= '1';
 
 
 

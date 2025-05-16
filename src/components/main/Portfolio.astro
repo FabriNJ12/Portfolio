@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollToPlugin);
 
 <body class="body h-full bg-[#030014] relative flex items-center justify-start flex-col cursor-default gap-60">
   <!-- Estrellas  -->
-  <script type="module" src="/public/stars.js"></script>
+  <script  type="module" src="/scripts/stars.js"></script>
 
   <!-- Black Hole Background with Video -->
   <div class="blackHole fixed top-0 left-0 w-dvw h-[520px] lg:h-[620px] xl:h-[720px] z-[-1] overflow-hidden pointer-events-none flex justify-center items-start opacity-0">
@@ -322,7 +322,7 @@ gsap.registerPlugin(ScrollToPlugin);
   <Footer />
 </body>
 
-<script src="/src/components/main/scrollTo.js"></script>
+<script is:inline src="/scripts/scrollTo.js"></script>
 
 <!--scroll animations -->
 <style is:global>
@@ -455,6 +455,6 @@ gsap.registerPlugin(ScrollToPlugin);
   requestAnimationFrame(raf);
 </script>
 
-<script src="/src/components/main/sideBar.js"></script>
+<script is:inline src="/scripts/sideBar.js"></script>
 
-<script src="/src/components/main/windowLoad.js"></script>
+<script is:inline src="/scripts/windowLoad.js"></script>
