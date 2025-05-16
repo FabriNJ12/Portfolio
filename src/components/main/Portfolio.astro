@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollToPlugin);
 
 <body class="body h-full bg-[#030014] relative flex items-center justify-start flex-col cursor-default gap-60">
   <!-- Estrellas  -->
-  <script  type="module" src="/scripts/stars.js"></script>
+  <script type="module" src="/scripts/stars.js"></script>
 
   <!-- Black Hole Background with Video -->
   <div class="blackHole fixed top-0 left-0 w-dvw h-[520px] lg:h-[620px] xl:h-[720px] z-[-1] overflow-hidden pointer-events-none flex justify-center items-start opacity-0">
@@ -21,6 +21,8 @@ gsap.registerPlugin(ScrollToPlugin);
       autoplay
       loop
       muted
+      aria-hidden="true"
+      role="presentation"
       class="w-full h-full max-w-[1024px] object-cover transform scale-130 translate-y-[-50%] rotate-180 transition-all duration-[4000ms] ease-in-out"
     >
     </video>
@@ -47,7 +49,7 @@ gsap.registerPlugin(ScrollToPlugin);
           <img class="w-[25px]" src="/main/hand.png" alt="" />
         </span>
         <!-- Menu Icon -->
-        <button class="btnOut w-[30px] h-[30px] flex items-center justify-center bg-black/20 rounded-full cursor-pointer duration-200 hover:scale-110">
+        <button class="btnOut w-[30px] h-[30px] flex items-center justify-center bg-transparent rounded-full cursor-pointer duration-200 hover:scale-110">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -109,6 +111,7 @@ gsap.registerPlugin(ScrollToPlugin);
     <!-- social btns -->
     <footer style="transform: translateY(100px);" class="content2 w-[80%] h-[60px] flex flex-row justify-center items-center gap-5 text-primaryColorText sm:mt-10 2xl:mt-30 opacity-0">
       <a
+        aria-label="Go to the GitHub profile"
         href="https://github.com/tu_usuario"
         target="_blank"
         rel="noopener noreferrer"
@@ -141,6 +144,7 @@ gsap.registerPlugin(ScrollToPlugin);
       </a>
 
       <a
+        aria-label="Go to the Linkedin profile"
         href="https://www.linkedin.com/in/fabrizio-jimenez-b583bb289/"
         target="_blank"
         rel="noopener noreferrer"
@@ -158,6 +162,7 @@ gsap.registerPlugin(ScrollToPlugin);
       </a>
 
       <a
+        aria-label="send email"
         href="mailto:fabrinj12@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
