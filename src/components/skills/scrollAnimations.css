@@ -1,0 +1,105 @@
+ .slide0, .slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7, .slide8, .slide9, .slide10, .slide11, .slide12, .slide13, .slide14 {
+    view-timeline: --Projets;
+    view-timeline-axis: block;
+    animation-timeline: --Projets;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+@media (max-width: 640px){
+    .slide0, .slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7, .slide8, .slide9, .slide10, .slide11, .slide12, .slide13, .slide14  {
+    animation-name: show4;
+  }
+}
+  
+
+  .slide0{
+    animation-range: entry 10% cover 11%;
+  }
+
+  .slide1{
+    animation-range: entry 10% cover 12%;
+  }
+
+  .slide2{
+    animation-range: entry 10% cover 13%;
+  }
+
+  .slide3{
+    animation-range: entry 10% cover 14%;
+  }
+
+  .slide4{
+    animation-range: entry 10% cover 15%;
+  }
+
+  .slide5{
+    animation-range: entry 10% cover 16%;
+  }
+
+  .slide6{
+    animation-range: entry 10% cover 17%;
+  }
+
+  .slide7{
+    animation-range: entry 10% cover 18%;
+  }
+
+  .slide8{
+    animation-range: entry 10% cover 19%;
+  }
+
+  .slide9{
+    animation-range: entry 10% cover 20%;
+  }
+
+  .slide10{
+    animation-range: entry 10% cover 21%;
+  }
+
+  .slide11{
+    animation-range: entry 10% cover 22%;
+  }
+
+  .slide12{
+    animation-range: entry 10% cover 23%;
+  }
+
+  .slide13{
+    animation-range: entry 10% cover 24%;
+  }
+
+  .slide14{
+    animation-range: entry 10% cover 25%;
+  }
+
+  @keyframes show4 {
+    from {
+      opacity: 0;
+      transform: scale(0.7);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @media (min-width: 640px) {
+    .slide0, .slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7, .slide8, .slide9, .slide10, .slide11, .slide12, .slide13, .slide14  {
+        animation-name: show5;
+        transform: translateY(100px);
+    }
+
+    @keyframes show5 {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  }

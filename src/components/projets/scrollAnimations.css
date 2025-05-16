@@ -1,0 +1,61 @@
+ @media (min-width: 640px) {
+    .textFill-1A,
+    .textFill-2A,
+    .textFill-3A {
+      view-timeline: --rojets;
+      view-timeline-axis: block;
+      animation-timeline: --rojets;
+      animation-fill-mode: both;
+      animation-duration: 3s;
+      opacity: 0;
+      transform: translateX(-100px);
+      transition: 500ms;
+    }
+
+    .textFill-1A,
+    .textFill-2A,
+    .textFill-3A {
+      animation-name: show3;
+      animation-range: entry 40% cover 30%;
+    }
+
+    @keyframes show3 {
+      from {
+        opacity: 1;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+  }
+
+  .uala,
+  .transito,
+  .samsung {
+    view-timeline: --Projets;
+    view-timeline-axis: block;
+    animation-timeline: --Projets;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+    opacity: 0;
+    scale: 0.9;
+  }
+
+  .uala,
+  .transito,
+  .samsung {
+    animation-name: show2;
+    animation-range: entry 25% cover 30%;
+  }
+
+  @keyframes show2 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }

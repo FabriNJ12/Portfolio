@@ -1,0 +1,152 @@
+---
+const { class: className, ...rest } = Astro.props;
+---
+
+<main class={`w-[90%] h-auto flex justify-center items-start flex-col font-['Roboto Flex'] text-[2.2rem gap-6 md:max-w-[1024px] mb-30 ${className}`}>
+  <header class="about relative w-full h-auto pb-10 flex justify-center items-center mb-10">
+    <h1 class="font-['Anton'] text-[7rem] blur-[2px] text-white/20 absolute">ABOUT</h1>
+    <h1 class="font-['Anton'] text-[3.75rem] text-white absolute">ABOUT</h1>
+  </header>
+
+  <h1 class="h1 font-['Roboto'] text-[2.2rem] text-[#dedede] font-[200] leading-[1.1] mb-15 md:text-[3.75rem] md:leading-[1]">
+    I believe in designing with visual clarity and purpose, ensuring that every interface I create balances usability, aesthetics, and responsiveness.
+  </h1>
+
+  <section class=" w-full flex flex-col gap-3">
+    <p class="text-[#acb5b5] text-[1rem] leading-[1] font-[400]">This is me</p>
+    <div class="line w-full bg-SecundaryTextColor/50 h-[1px]"></div>
+  </section>
+
+  <div class="w-full h-auto flex flex-col md:flex-row">
+    <h2 class="left text-[#dedede] text-[3rem] leading-[1] mb-5 md:w-[40%] md:mr-10">HI, I´M FABRIZIO.</h2>
+
+    <p class="right text-[#acb5b5] text-[1.25rem] leading-[1.4] font-[400] md:w-[60%] max-w-[450px]">
+      I'm a frontend developer passionate about transforming challenges into practical, well-structured solutions. I focus on clean design, responsive layouts, and performance-driven development. <br
+      />Through real-world projects, I’ve learned to build scalable interfaces that not only look good, but function reliably—aligning user expectations with smart technical decisions.
+    </p>
+  </div>
+</main>
+
+<style>
+  .about,
+  .h1,
+  .left,
+  .right,
+  .line {
+    view-timeline: --rojets;
+    view-timeline-axis: block;
+    animation-timeline: --rojets;
+    animation-fill-mode: both;
+    animation-duration: 3s;
+    opacity: 0;
+  }
+
+  .about,
+  .h1 {
+    scale: 0.8;
+    animation-name: entry;
+    animation-range: entry 20% cover 50%;
+    animation-duration: 3s;
+  }
+
+  .left,
+  .right {
+    transform: translateX(-100px);
+    animation-name: entrySM;
+    animation-duration: 3s;
+    animation-range: entry 10% cover 20%;
+  }
+
+  .line {
+    transform: scaleX(0);
+    animation-name: entryLine;
+    animation-duration: 3s;
+    animation-range: entry 10% cover 50%;
+    opacity: 1;
+    transform-origin: left;
+  }
+
+  @keyframes entry {
+    from {
+      opacity: 0;
+      scale: 0.8;
+    }
+
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+
+  @keyframes entryLine {
+    from{
+        opacity: 1;
+        transform: scaleX(0);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .left,
+    .right {
+      transform: translateX(-100px);
+      animation-name: entrySM;
+      animation-duration: 3s;
+      animation-range: entry 10% cover 20%;
+    }
+
+    @keyframes entrySM {
+      from {
+        transform: translateX(-50px);
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .left {
+      transform: translateY(50px);
+      animation-name: entryMD1;
+      animation-duration: 3s;
+      animation-range: entry 10% cover 20%;
+    }
+    @keyframes entryMD1 {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .right {
+      transform: translateY(50px);
+      animation-name: entryMD2;
+      animation-duration: 3s;
+      animation-range: entry 10% cover 20%;
+    }
+    @keyframes entryMD2 {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+</style>

@@ -1,0 +1,23 @@
+@import "tailwindcss";
+:root {
+  font-family: "Roboto Flex", "Roboto Mono", "Roboto", "Anton", "Mali";
+}
+
+@theme {
+  --color-primaryColorText: #f8fafc;
+  --color-TextSelected: #ffffff;
+  --color-SecundaryTextColor: #90a1b9;
+  --color-BlackText: #161e32;
+  --color-Buttons: #cbd2da;
+}
+
+
+html, body {
+  width: 100%;
+  max-width: 100vw; /* o 100dvw si lo manejás bien */
+  overflow-x: clip;
+}
+
+
+
+

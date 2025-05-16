@@ -1,0 +1,460 @@
+---
+import Proyects from "../projets/proyects.astro";
+import Skills from "../skills/Skills.astro";
+import About from "../about/about.astro";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/all";
+import Footer from "../Footer/footer.astro";
+
+gsap.registerPlugin(ScrollToPlugin);
+---
+
+<body class="body h-full bg-[#030014] relative flex items-center justify-start flex-col cursor-default gap-60">
+  <!-- Estrellas  -->
+  <script type="module" src="/public/stars.js"></script>
+
+  <!-- Black Hole Background with Video -->
+  <div class="blackHole fixed top-0 left-0 w-dvw h-[520px] lg:h-[620px] xl:h-[720px] z-[-1] overflow-hidden pointer-events-none flex justify-center items-start opacity-0">
+    <video
+      id="videoElement"
+      src="../main/blackhole.webm"
+      autoplay
+      loop
+      muted
+      class="w-full h-full max-w-[1024px] object-cover transform scale-130 translate-y-[-50%] rotate-180 transition-all duration-[4000ms] ease-in-out"
+    >
+    </video>
+  </div>
+
+  <!-- Main Content -->
+  <main class="w-full h-auto flex items-center justify-start flex-col z-50 max-w-[1920px] pt-[30px] relative sm:mb-30">
+    <header
+      style="transform: translateY(-150%);"
+      class="objet fixed w-[80%] max-w-[700px] h-[60px] rounded-[10px] flex px-4 md:w-[70%] md:px-10 bg-black/20 backdrop-blur-[15px] border border-white/20 z-200 opacity-0"
+    >
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex w-full items-center justify-between [&>*]:text-TextSelected [&>*]:cursor-pointer [&>*]:duration-200 [&>*]:p-2">
+        <button data-target="Home" class="hover:scale-120">Home</button>
+        <button data-target="About" class="hover:scale-120">About</button>
+        <button data-target="Projets" class="hover:scale-120">Projects</button>
+        <button data-target="Skills" class="hover:scale-120">Skills</button>
+      </nav>
+
+      <!-- Mobile Nav -->
+      <nav class="flex w-full items-center justify-between md:hidden [&>*]:text-TextSelected">
+        <span class="flex items-center gap-2">
+          <p class="font-['Roboto']">¡Hello!</p>
+          <img class="w-[25px]" src="/main/hand.png" alt="" />
+        </span>
+        <!-- Menu Icon -->
+        <button class="btnOut w-[30px] h-[30px] flex items-center justify-center bg-black/20 rounded-full cursor-pointer duration-200 hover:scale-110">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icon-tabler-menu-2"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <!-- content -->
+    <section style="transform: translateY(100px);" class="content w-[80%] h-[85%] mt-20 lg:mt-60 flex justify-center items-center xl:w-[80%] opacity-0">
+      <div class="flex flex-col lg:flex-row justify-center items-center w-full h-full">
+        <!-- Left / Name Image -->
+        <aside class="Left flex justify-center items-center w-full lg:w-1/2 h-[90%] min-w-[320px] lg:justify-end relative">
+          <div class="flex flex-col gap-1 justify-center items-center md:items-center lg:items-start w-full max-w-[700px] h-[280px]">
+            <p class="text-white/20 text-xl font-['Mali'] hidden sm:flex">&lt;h1&gt;</p>
+            <h1
+              style="text-shadow: 0px 0px 50px  rgba(255, 255, 255, 0.5);"
+              class="w-[90%] lg:w-[60%] lg:text-[clamp(1.5rem,3vw,2.8rem)] text-[2.8rem] font-['Roboto'] text-SecundaryTextColor leading-[1.2] text-center lg:text-start"
+            >
+              I’M <span class="text-[3.4rem] lg:text-[clamp(2rem,4vw,3.4rem)] font-['Roboto Mono'] text-TextSelected">Fabrizio</span>
+              <span class="text-[3.4rem] lg:text-[clamp(2rem,4vw,3.4rem)] font-['Roboto Mono'] text-TextSelected block">Jimenez</span>
+              <span class="text-[2.8rem] lg:text-[clamp(1.5rem,3vw,2.8rem)] font-['Roboto'] text-SecundaryTextColor block md:whitespace-nowrap">Front-end web developer</span>
+            </h1>
+            <p class="text-white/20 text-xl font-['Mali'] hidden sm:flex">&lt;/h1&gt;</p>
+            <footer class="flex justify-center items-center gap-10 [&>*]:duration-200 [&>*]:cursor-pointer [&>*]:hover:scale-105 lg:justify-start w-full mt-5">
+              <a href="mailto:fabrinj12@gmail.com" class="w-[145px] h-[40px] bg-Buttons text-BlackText rounded-[10px] font-['Roboto'] flex justify-center items-center">Contact Me</a>
+
+              <a
+                href="https://drive.google.com/file/d/1lMsbaZrwhacDsdpISLxrCW7VZoeGJBmR/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-[145px] h-[40px] border border-Buttons text-primaryColorText bg-BlackText rounded-[10px] font-['Roboto'] flex justify-center items-center"
+              >
+                Download CV
+              </a>
+            </footer>
+          </div>
+        </aside>
+
+        <!-- Right / Code Window Image -->
+        <aside class="right flex justify-center items-center w-full lg:w-[50%] lg:items-center h-[100%] lg:justify-start">
+          <div class="flex flex-col justify-center items-start min-w-[350px] max-w-[600px] h-90 lg:min-w-[400px] lg:max-w-[700px] md:max-w-[500px] sm:max-w-[500px] sm:mt-20 lg:mt-0">
+            <img src="/main/windowCode.png" alt="" />
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- social btns -->
+    <footer style="transform: translateY(100px);" class="content2 w-[80%] h-[60px] flex flex-row justify-center items-center gap-5 text-primaryColorText sm:mt-10 2xl:mt-30 opacity-0">
+      <a
+        href="https://github.com/tu_usuario"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="box-shadow: 0px 0px 40px 25px rgba(106, 103, 255, 0.070); background-color: rgba(106, 103, 255, 0.070);"
+        class="github h-[50px] w-[50px] flex justify-center items-center duration-200 cursor-pointer rounded-full hover:bg-BlackText hover:scale-110"
+      >
+        <!-- GitHub Icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="35"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2
+    c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2
+    s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3
+    a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6
+    c-.6 .6 -.6 1.2 -.5 2v3.5"
+          >
+          </path>
+        </svg>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/fabrizio-jimenez-b583bb289/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="box-shadow: 0px 0px 40px 25px rgba(156, 103, 255, 0.070); background-color: rgba(106, 103, 255, 0.070);"
+        class="linkedin h-[50px] w-[50px] flex justify-center items-center duration-200 cursor-pointer rounded-full hover:bg-BlackText hover:scale-110"
+      >
+        <!-- LinkedIn Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1"
+          >
+          </path>
+        </svg>
+      </a>
+
+      <a
+        href="mailto:fabrinj12@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="box-shadow: 0px 0px 40px 25px rgba(106, 103, 255, 0.070); background-color: rgba(106, 103, 255, 0.070);"
+        class="gmail h-[50px] w-[50px] flex justify-center items-center duration-200 cursor-pointer rounded-full hover:bg-BlackText hover:scale-110"
+      >
+        <!-- Gmail Icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="35"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-mail"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
+          <path d="M3 7l9 6l9 -6"></path>
+        </svg>
+      </a>
+    </footer>
+  </main>
+
+  <!-- sideBar menu -->
+  <section class="bg opacity-0 pointer-events-none w-full h-full fixed z-50 flex md:hidden justify-end items-end bg-black/50">
+    <div
+      class="sideBar bg-[#020618] w-[65%] sm:w-[50%] md:w-[40%] h-full left-1/2 flex flex-col pt-[35px] px-6 rounded-tl-xl rounded-bl-xl border-y-[1px] border-l-[1px] border-SecundaryTextColor/30 gap-5 translate-x-[100%]"
+    >
+      <header class="w-full h-[50px] flex flex-row justify-between items-center text-TextSelected">
+        <h1 class="text-2xl font-['Roboto']">Fabrizio Jimenez</h1>
+        <!-- Menu Icon -->
+        <button class="btnIn w-[40px] h-[40px] flex items-center justify-center bg-black/20 rounded-full cursor-pointer duration-200 hover:scale-110">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icon-tabler-menu-2"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </header>
+
+      <main class="w-full h-auto flex flex-col items-center justify-start">
+        <button
+          data-target="Home"
+          class="h-[50px] w-full flex flex-row justify-start items-center text-l text-SecundaryTextColor font-['Roboto mono'] duration-150 gap-2 px-3 cursor-pointer rounded-xl hover:bg-[#121a2f] hover:scale-99 font-extrabold"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-home"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l-2 0l9 -9l9 9l-2 0"></path><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path><path
+              d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"
+            >
+            </path>
+          </svg>
+          Home
+        </button>
+
+        <button
+          data-target="About"
+          class="h-[50px] w-full flex flex-row justify-start items-center text-l text-SecundaryTextColor font-['Roboto mono'] duration-150 gap-2 px-3 cursor-pointer rounded-xl hover:bg-[#121a2f] hover:scale-99 font-extrabold"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-user-code"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path><path d="M6 21v-2a4 4 0 0 1 4 -4h3.5"></path><path d="M20 21l2 -2l-2 -2">
+            </path><path d="M17 17l-2 2l2 2"></path>
+          </svg>
+          About
+        </button>
+
+        <button
+          data-target="Projets"
+          class="h-[50px] w-full flex flex-row justify-start items-center text-l text-SecundaryTextColor font-['Roboto mono'] duration-150 gap-2 px-3 cursor-pointer rounded-xl hover:bg-[#121a2f] hover:scale-99 font-extrabold"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-databricks"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 17l9 5l9 -5v-3l-9 5l-9 -5v-3l9 5l9 -5v-3l-9 5l-9 -5l9 -5l5.418 3.01"></path>
+          </svg>
+          Proyects
+        </button>
+
+        <button
+          data-target="Skills"
+          class="h-[50px] w-full flex flex-row justify-start items-center text-l text-SecundaryTextColor font-['Roboto mono'] duration-150 gap-2 px-3 cursor-pointer rounded-xl hover:bg-[#121a2f] hover:scale-99 font-extrabold"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-braces"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M7 4a2 2 0 0 0 -2 2v3a2 3 0 0 1 -2 3a2 3 0 0 1 2 3v3a2 2 0 0 0 2 2"></path>
+            <path d="M17 4a2 2 0 0 1 2 2v3a2 3 0 0 0 2 3a2 3 0 0 0 -2 3v3a2 2 0 0 1 -2 2"></path>
+          </svg>
+          Skills
+        </button>
+      </main>
+    </div>
+  </section>
+
+  <!--ABOUT -->
+  <div id="About" class="w-[90%] flex justify-center">
+    <About class="header" />
+  </div>
+
+  <!--Proyects -->
+  <div id="Projets" class="w-full">
+    <Proyects class="reveal" />
+  </div>
+
+  <div id="Skills" class="w-full">
+    <Skills class="revealSkills" />
+  </div>
+
+  <Footer />
+</body>
+
+<script src="/src/components/main/scrollTo.js"></script>
+
+<!--scroll animations -->
+<style is:global>
+  /* === KEYFRAMES === */
+  @keyframes show {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes exitLeft {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+  }
+
+  @keyframes exitRight {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    @keyframes exitLeft {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+        transform: translateX(-200px);
+      }
+    }
+
+    @keyframes exitRight {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+        transform: translateX(200px);
+      }
+    }
+  }
+
+  .reveal,
+  .Left,
+  .right,
+  .revealSkills {
+    view-timeline: --Projets;
+    view-timeline-axis: block;
+    animation-timeline: --Projets;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+  }
+
+  .reveal {
+    animation-name: show;
+    animation-range: entry 25% cover 30%;
+  }
+
+  .revealSkills {
+    animation-name: show;
+    animation-range: entry 25% cover 30%;
+  }
+
+  /* === EXIT ANIMATIONS === */
+  .Left {
+    animation-name: exitLeft;
+    animation-range: entry 500% exit 500%;
+  }
+
+  .right {
+    animation-name: exitRight;
+    animation-range: entry 200% exit 300%;
+  }
+
+  .header {
+    view-timeline: --Projets;
+    view-timeline-axis: block;
+    animation-timeline: --Projets;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+    animation-name: header;
+    animation-range: entry 20% cover 40%;
+    opacity: 1;
+  }
+
+  @keyframes header {
+    from {
+      .objet {
+        opacity: 1;
+      }
+    }
+
+    to {
+      .objet {
+        opacity: 0;
+      }
+    }
+  }
+</style>
+
+<!--Lanis Scroll -->
+<script>
+  import Lenis from "@studio-freight/lenis";
+
+  const lenis = new Lenis({
+    duration: 1.5, // velocidad en segundos
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  });
+
+  function raf(time: number) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+</script>
+
+<script src="/src/components/main/sideBar.js"></script>
+
+<script src="/src/components/main/windowLoad.js"></script>

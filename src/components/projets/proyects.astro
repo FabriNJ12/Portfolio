@@ -1,0 +1,179 @@
+---
+const { class: className, ...rest } = Astro.props;
+import '../projets/projetsBorder.css'
+import '../projets/HoverNameProjets.css'
+import '../projets/scrollAnimations.css'
+---
+
+<main class={`w-full h-auto sm:h-full border-[0px] border-SecundaryTextColor flex justify-center items-center flex-col min-w-[320px] gap-15 sm:gap-0 relative mb-30  ${className}`}>
+  <header class="relative w-full h-auto pb-10 flex justify-center items-center">
+    <h1 class="font-['Anton'] text-[7rem] blur-[2px] text-white/20 absolute">WORKS</h1>
+    <h1 class="font-['Anton'] text-[3.75rem] text-white absolute">WORKS</h1>
+  </header>
+
+  <section class="area w-full h-auto relative flex flex-col sm:mt-15 md:mt-17 xl:mt-25">
+    <!-- UALA -->
+    <div class="w-full flex justify-center bg-[#1d293d]/50 pt-10">
+      <section class="w-[80%] h-auto flex flex-col">
+        <!-- >640px -->
+        <span class="hidden sm:flex flex-row justify-start items-start gap-2 textFill-1A">
+          <p class="text-SecundaryTextColor font-['Anton'] text-sm">_01.</p>
+          <h1 class="w-full textFillBase textFill-1 relative inline-block text-TextSelected text-5xl md:text-6xl font-['Anton'] whitespace-nowrap">SISTEMA BANCARIO</h1>
+        </span>
+
+        <p class="text-SecundaryTextColor font-['Anton'] text-sm sm:hidden">_01.</p>
+        <h1 class="textFill relative inline-block text-TextSelected text-4xl font-['Anton'] whitespace-nowrap sm:hidden">SISTEMA BANCARIO</h1>
+        <nav class="flex flex-row gap-6 ml-2 mt-1 sm:pl-5">
+          <span class="flex flex-row text-SecundaryTextColor justify-start items-center gap-2">
+            <div class="w-[10px] h-[10px] bg-[#ef404d] rounded-full"></div>
+            <p class="text-[0.75rem] font-['Roboto']">Angular</p>
+          </span>
+
+          <span class="flex flex-row text-SecundaryTextColor justify-start items-center gap-2">
+            <div class="w-[10px] h-[10px] bg-[#00acc1] rounded-full"></div>
+            <p class="text-[0.75rem] font-['Roboto']">Tailwind</p>
+          </span>
+
+          <span class="flex flex-row text-SecundaryTextColor justify-start items-center gap-2">
+            <div class="w-[10px] h-[10px] bg-[#777bb3] rounded-full"></div>
+            <p class="text-[0.75rem] font-['Roboto']">Php</p>
+          </span>
+
+          <span class="flex flex-row text-SecundaryTextColor justify-start items-center gap-2">
+            <div class="w-[10px] h-[10px] bg-[#006064] rounded-full"></div>
+            <p class="text-[0.75rem] font-['Roboto']">MariaDB</p>
+          </span>
+        </nav>
+        <footer class="w-full h-auto flex justify-center items-center mt-5 max-w-[500px] sm:hidden bg-transparent">
+          <img class="uala w-full rounded-xl" src="projets/UALA.png " alt="" />
+        </footer>
+        <div class="w-full h-[1px] bg-SecundaryTextColor mt-14 sm:mt-2"></div>
+      </section>
+    </div>
+
+    <!-- TRANSITO -->
+    <div class="w-full flex justify-center bg-[#1d293d]/50 pt-10">
+      <section class="w-[80%] h-auto flex flex-col">
+        <span class="hidden sm:flex flex-row justify-start items-start gap-2 textFill-2A">
+          <p class="text-SecundaryTextColor font-['Anton'] text-sm">_02.</p>
+          <h1 id="textFill-2" class="w-full textFillBase textFill-2 relative inline-block text-TextSelected text-5xl md:text-6xl font-['Anton'] whitespace-nowrap">TRANSITGEST</h1>
+        </span>
+
+        <p class="text-SecundaryTextColor font-['Anton'] text-sm sm:hidden">_02.</p>
+        <h1 class="textFill relative inline-block text-TextSelected text-4xl font-['Anton'] whitespace-nowrap sm:hidden">TRANSITGEST</h1>
+        <nav class="flex flex-row gap-6 ml-2 mt-1 sm:pl-6">
+          <span class="flex flex-row text-SecundaryTextColor justify-start items-center gap-2">
+            <div class="w-[10px] h-[10px] bg-[#ff5607] rounded-full"></div>
+            <p class="text-[0.75rem] font-['Roboto']">Astro</p>
+          </span>
+
+          <span class="flex flex-row text-SecundaryTextColor justify-start items-center gap-2">
+            <div class="w-[10px] h-[10px] bg-[#1e98ec] rounded-full"></div>
+            <p class="text-[0.75rem] font-['Roboto']">TypeScript</p>
+          </span>
+
+          <span class="flex flex-row text-SecundaryTextColor justify-start items-center gap-2">
+            <div class="w-[10px] h-[10px] bg-[#777bb3] rounded-full"></div>
+            <p class="text-[0.75rem] font-['Roboto']">Php</p>
+          </span>
+
+          <span class="flex flex-row text-SecundaryTextColor justify-start items-center gap-2">
+            <div class="w-[10px] h-[10px] bg-[#006064] rounded-full"></div>
+            <p class="text-[0.75rem] font-['Roboto']">MariaDB</p>
+          </span>
+        </nav>
+        <footer class="w-full h-auto flex justify-center items-center mt-5 bg-transparent rounded-xl max-w-[500px] sm:hidden">
+          <img class="transito w-full min-h-[160px] rounded-xl object-contain" src="/projets/TRANSITO.jpg " alt="" />
+        </footer>
+        <div class="w-full h-[1px] bg-SecundaryTextColor mt-14 sm:mt-2"></div>
+      </section>
+    </div>
+
+    <!-- ONE UI -->
+    <div class="w-full flex justify-center bg-[#1d293d]/50 py-10">
+      <section class="w-[80%] h-auto flex flex-col">
+        <span class="hidden sm:flex flex-row justify-start items-start gap-2 textFill-3A">
+          <p class="text-SecundaryTextColor font-['Anton'] text-sm">_03.</p>
+          <h1 class="w-full textFillBase textFill-3 relative inline-block text-TextSelected text-5xl md:text-6xl transition-transform duration-1000 font-['Anton'] whitespace-nowrap">
+            ONE UI REPLICA
+          </h1>
+        </span>
+
+        <p class="text-SecundaryTextColor font-['Anton'] text-sm sm:hidden">_03.</p>
+        <h1 class="textFill relative inline-block text-TextSelected text-5xl font-['Anton'] whitespace-nowrap sm:hidden">ONE UI REPLICA</h1>
+        <nav class="flex flex-row gap-6 ml-2 mt-1 sm:pl-6">
+          <span class="flex flex-row text-SecundaryTextColor justify-start items-center gap-2">
+            <div class="w-[10px] h-[10px] bg-[#ffee07] rounded-full"></div>
+            <p class="text-[0.75rem] font-['Roboto']">JavaScript</p>
+          </span>
+
+          <span class="flex flex-row text-SecundaryTextColor justify-start items-center gap-2">
+            <div class="w-[10px] h-[10px] bg-[#c76d94] rounded-full"></div>
+            <p class="text-[0.75rem] font-['Roboto']">Sass</p>
+          </span>
+        </nav>
+        <footer class="w-full h-auto flex justify-center items-center mt-5 bg-transparent rounded-xl max-w-[500px] sm:hidden">
+          <img class="samsung w-full min-h-[160px] rounded-xl object-contain" src="/projets/SAM.png " alt="" />
+        </footer>
+        <div class="w-full h-[1px] bg-SecundaryTextColor mt-14 sm:mt-2"></div>
+      </section>
+    </div>
+
+    <!-- Cads <1280px -->
+    <div class="absolute xl:hidden left-1/2 -translate-x-1/2 w-[80%] h-full hidden sm:flex justify-end items-center pointer-events-none">
+      <img src="/public/projets/TRANSITO.jpg" class="figure rounded-xl md:scale-125" alt="">
+    </div>
+
+    <!-- Cads >1280px -->
+    <div class="hidden xl:flex absolute left-1/2 -translate-x-1/2 w-[80%] h-full justify-end items-center pointer-events-none">
+      <span
+        style="backdrop-filter: blur(10px); box-shadow: 0px 0px 40px 30px rgba(49, 39, 185, 0.089);"
+        class="card bg-[#0d0e2a] w-[480px] h-[550px] flex flex-col items-center rounded-2xl border-[1px] border-[#90A1B9]/50"
+      >
+        <figure class="figuree w-full h-1/2 bg-center bg-cover bg-no-repeat rounded-t-2xl overflow-hidden relative">
+          <div style="background-image: url('projets/UALA.png')" class="Uala w-full h-full bg-cover bg-center bg-no-repeat duration-300 absolute"></div>
+
+          <div style="background-image: url('projets/TRANSITO.jpg')" class="Transito opacity-0 w-full h-full bg-cover bg-center bg-no-repeat duration-300 absolute"></div>
+
+          <div style="background-image: url('projets/SAM.png');" class="Samsung opacity-0 w-full h-full bg-cover bg-center bg-no-repeat duration-300 absolute"></div>
+        </figure>
+
+        <!-- description -->
+        <article class="w-[90%] h-1/2 flex flex-col items-center justify-center font-['Roboto'] text-[0.9rem] gap-4">
+          <h1 class="title text-TextSelected text-[1.1rem]">Gestor de control vehicular</h1>
+          <p class="subtitle text-center text-SecundaryTextColor">Sistema que automatiza el proceso de controles vehiculares. Notifica al personal designado y gestiona la emisión de multas.</p>
+
+          <section class="w-full h-auto flex flex-wrap flex-row text-TextSelected gap-1 [&>*]:bg-BlackText [&>*]:rounded-md [&>*]:px-2 [&>*]:py-[2px]">
+            <p class="one">#Login con jerarquía</p>
+            <p class="two">#Gestión de ubicacón</p>
+            <p class="three">#UI dinámica según el rol</p>
+            <p class="four">#Validacón de formularios</p>
+          </section>
+
+          <p class="footer text-center flex flex-row justify-center items-start text-SecundaryTextColor">
+            <svg
+              class="text-TextSelected"
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path>
+            </svg> Uno de mis proyectos más ambiciosos, inicialmente creado para un proyecto de la Universidad.
+          </p>
+        </article>
+      </span>
+    </div>
+  </section>
+</main>
+
+
+<script src="/src/components/projets/MdHoverCard.js"></script>
+<script src="/src/components/projets/HoverCard.js"></script>
+

@@ -1,0 +1,49 @@
+.slide0, .slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7, .slide8, .slide9, .slide10, .slide11, .slide12, .slide13, .slide14
+   {
+    position: relative;
+    z-index: 0;
+  }
+
+  .slide0::before,
+  .slide1::before,
+  .slide2::before,
+  .slide3::before,
+  .slide4::before,
+  .slide5::before,
+  .slide6::before,
+  .slide7::before,
+  .slide8::before,
+  .slide9::before,
+  .slide10::before,
+  .slide11::before,
+  .slide12::before,
+  .slide13::before,
+  .slide14::before {
+    opacity: 60%;
+    content: "";
+    position: absolute;
+    inset: -2px; /* fuera del borde real */
+    background: linear-gradient(120deg, #fc72ff, #8f68ff, #487cff, #8f68ff, #fc72ff);
+    background-size: 400% 400%;
+    animation: borderMove 7s linear infinite;
+    z-index: 20;
+    border-radius: 18px;
+    padding: 2px;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+  }
+
+  /* Animación */
+  @keyframes borderMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 400% 50%;
+    }
+  }
+
+  

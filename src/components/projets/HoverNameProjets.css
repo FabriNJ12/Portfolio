@@ -1,0 +1,44 @@
+ .textFillBase {
+    position: relative;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 5.5s linear infinite;
+    z-index: 0;
+    cursor: pointer;
+  }
+
+  .textFillBase::after {
+    position: absolute;
+    inset: 0;
+    display: block;
+    color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: white;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .textFillBase:hover::after {
+    opacity: 0;
+  }
+
+  .textFill-1::after {
+    content: "SISTEMA BANCARIO";
+  }
+  .textFill-2::after {
+    content: "TRANSITGEST";
+  }
+  .textFill-3::after {
+    content: "ONE UI REPLICA";
+  }
+
+  @keyframes animate-gradient {
+    to {
+      background-position: 200%;
+    }
+  }

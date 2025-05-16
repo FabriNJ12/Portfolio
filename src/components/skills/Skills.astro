@@ -1,0 +1,117 @@
+---
+ const buttons = [
+  { img: '/public/icons/Angular.png', text: 'Angular' },
+  { img: '/public/icons/CSS.png', text: 'CSS' },
+  { img: '/public/icons/HTML.png', text: 'HTML' },
+  { img: '/public/icons/JS.png', text: 'JavaScript' },
+  { img: '/public/icons/TS.png', text: 'TypeScript' },
+  { img: '/public/icons/ASTRO.png', text: 'Astro' },
+  { img: '/public/icons/PHP.png', text: 'PHP' },
+  { img: '/public/icons/TAILWIND.png', text: 'Tailwind CSS' },
+  { img: '/public/icons/SASS.png', text: 'SASS' },
+  { img: '/public/icons/MARIADB.png', text: 'MariaDB' },
+  { img: '/public/icons/C+++.png', text: 'C++' },
+  { img: '/public/icons/FIGMA.png', text: 'Figma' },
+  { img: '/public/icons/GITHUB.png', text: 'GitHub' },
+  { img: '/public/icons/GIT.png', text: 'Git' },
+  { img: '/public/icons/VITE.png', text: 'Vite' },
+];
+
+const { class: className, ...rest } = Astro.props;
+import '../skills/BorderAnimation.css';
+import '../skills/scrollAnimations.css'
+---
+
+
+
+<main class=`w-full h-full flex flex-col justify-start items-center gap-18   ${className}`>
+  <header class="relative w-full h-[120px] flex justify-center items-center">
+    <h1 class="font-['Anton'] text-[8rem] blur-[2px] text-white/20 absolute">SKILLS</h1>
+    <h1 class="font-['Anton'] text-[3.75rem] text-white absolute">SKILLS</h1>
+  </header>
+
+  <section class="w-full h-auto flex justify-center items-center">
+    <div class="w-[100px] h-[1px] bg-gradient-to-r from-transparent to-[#D285FF]/50"></div>
+
+    <div class="w-[10px] h-[10px] rounded-full bg-[#D285FF]/50 mx-2"></div>
+
+    <div class="w-[100px] h-[1px] bg-gradient-to-r from-[#D285FF]/50 to-transparent"></div>
+  </section>
+
+  <h2 class="w-[80%] sm:w-[70%] lg:w-[30%] text-center font-['Roboto Flex'] text-[1rem] text-white">I CONSTANTLY TRY TO LEARN AND EXPLORE DIFFERENT TECHNOLOGIES</h2>
+
+  <article class="flex flex-col w-full h-auto  bg-[#1d293d]/50 justify-center items-center py-10">
+    <!-- sm -->
+    <div class="w-[80%] flex flex-col gap-x-5 gap-y-4 md:hidden ">
+
+        <nav class="w-full h-auto flex flex-row flex-wrap gap-[5%] gap-y-2   justify-center items-center">   
+            {buttons.slice(0,5).map((img, index) => (<!-- @ts-ignore -->
+                <a key={index} href="" class={`slide${index} min-w-[45px] min-h-[40px]  rounded-lg p-1 bg-[#161E32]/50 flex justify-center items-center hover:scale-110 duration-200 cursor-pointer`}>
+                <img src={img.img} class="w-[35px] h-[35px]" alt="">
+            </a>
+            ))}
+        </nav>
+
+
+        <nav class="w-full h-auto flex flex-row flex-wrap gap-[5%] gap-x-5 gap-y-4  justify-center items-center">   
+            {buttons.slice(5,11).map((img, index) => (<!-- @ts-ignore -->
+                <a key={index} href="" class={`slide${index+5} min-w-[45px] min-h-[40px]  rounded-lg p-1 bg-[#161E32]/50 flex justify-center items-center hover:scale-110 duration-200 cursor-pointer `}>
+                <img src={img.img} class="w-[35px] h-[35px]" alt="">
+            </a>
+            ))}
+        </nav>
+
+        <nav class="w-full h-auto flex flex-row flex-wrap gap-[5%] gap-x-5 gap-y-4  justify-center items-center">   
+            {buttons.slice(11,15).map((img, index) => (<!-- @ts-ignore -->
+                <a key={index} href="" class={`slide${index+11} min-w-[45px] min-h-[40px]  rounded-lg p-1 bg-[#161E32]/50 flex justify-center items-center hover:scale-110 duration-200 cursor-pointer`}>
+                <img src={img.img} class="w-[35px] h-[35px]" alt="">
+            </a>
+            ))}
+        </nav>
+
+        
+    </div>
+
+    <!-- >sm -->
+    <div class="w-[80%] hidden flex-col gap-5 md:flex">
+
+        <nav class="w-full h-auto flex flex-row flex-wrap gap-8 gap-y-3  justify-center items-center">   
+            {buttons.slice(0,5).map((img, index) => (<!-- @ts-ignore -->
+                <a key={index} href="" class={`slide${index} min-w-[45px] min-h-[40px] text-TextSelected flex-row py-1 px-4  rounded-lg p-1 bg-[#161E32]/50  flex justify-center items-center hover:scale-110 duration-200 cursor-pointer gap-1`}>
+                <img src={img.img} class="w-[35px] h-[35px]" alt="">
+                <p>{img.text}</p>
+            </a>
+            ))}
+        </nav>
+
+        <nav class="w-full h-auto flex flex-row flex-wrap gap-8 gap-y-3  justify-center items-center">   
+            {buttons.slice(5,11).map((img, index) => (<!-- @ts-ignore -->
+                <a key={index} href="" class={`slide${index+5} gap-1 min-w-[45px] min-h-[40px] text-TextSelected flex-row py-1 px-4  rounded-lg p-1 bg-[#161E32]/50  flex justify-center items-center hover:scale-110 duration-200 cursor-pointer `}>
+                <img src={img.img} class="w-[35px] h-[35px]" alt="">
+                <p>{img.text}</p>
+            </a>
+            ))}
+        </nav>
+
+        <nav class="w-full h-auto flex flex-row flex-wrap gap-8 gap-y-3  text-TextSelected justify-center items-center">   
+            {buttons.slice(11,15).map((img, index) => (<!-- @ts-ignore -->
+                <a key={index} href="" class={`slide${index+11} gap-1 min-w-[45px] min-h-[40px] text-TextSelected flex-row  py-1 px-4  rounded-lg p-1 bg-[#161E32]/50  flex justify-center items-center hover:scale-110 duration-200 cursor-pointer `}>
+                <img src={img.img} class="w-[35px] h-[35px]" alt="">
+                <p>{img.text}</p>
+            </a>
+            ))}
+        </nav>
+
+        
+    </div>
+  </article>
+</main>
+
+
+<style>
+   
+
+</style>
+
+
+
